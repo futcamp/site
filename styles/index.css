@@ -1,0 +1,146 @@
+@font-face {
+    font-family: Ubuntu-Regular;
+    src: url('../assets/fonts/Ubuntu-Regular.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: Ubuntu-Regular, sans-serif;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.logo {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.brand {
+    font-size: 46px;
+}
+
+.about {
+    font-size: 24px;
+    margin: 0 0 8px;
+}
+
+.social {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 0 6px;
+}
+
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 36px;
+    min-width: 36px;
+    background: #4286f4;
+    border-radius: 18px;
+
+}
+
+.social__link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.capabilities__block {
+    display: flex;
+    align-items: center;
+    min-height: 512px;
+}
+
+.capabilities__inner {
+    max-width: 70%;
+    margin: 0 0 0 64px;
+}
+
+.capabilities__block.m-welcome {
+    min-height: 90vh;
+}
+
+.capabilities__block.m-blue {
+    background: #1976d2;
+}
+
+.capabilities__block.m-purple {
+    background: #512da8;
+}
+
+.capabilities__block.m-green {
+    background: #388e3c;
+}
+
+.capabilities__block.m-yellow {
+    background: #f57c00;
+}
+
+.capabilities__block.m-gray {
+    background: #616161;
+}
+
+.capabilities__block.m-red {
+    background: #d32f2f;
+}
+
+.capabilities__title {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 0 36px;
+}
+
+.capabilities__title.m-black {
+    color: #000;
+}
+
+.capabilities__link {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid #fff;
+}
+
+.capabilities__list {
+    display: grid;
+    grid-template-columns: repeat(3, 48px);
+}
+
+.capabilities__image {
+    max-height: 36px;
+    max-width: 36px;
+}
+
+@media screen and (max-width: 768px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        position: relative;
+    }
+
+    .social__item {
+        min-height: 48px;
+        min-width: 48px;
+        border-radius: 24px;
+    }
+}
